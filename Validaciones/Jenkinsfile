@@ -8,7 +8,9 @@ pipeline
         stage("Lunes")
         {
             steps{
-                println "Hoy no se hace nada."
+                if(dia==1){
+                    println "Hoy no se hace nada."
+                }
             }
         }
         stage("Martes")
@@ -26,13 +28,17 @@ pipeline
         stage("Miércoles")
         {
             steps{
-                println "Hoy no se hace nada."
+                if(dia==3){
+                    println "Hoy no se hace nada."
+                }
             }
         }
         stage("Jueves")
         {
             steps{
-                println "Hoy no se hace nada."
+                if(dia==4){
+                    println "Hoy no se hace nada."
+                }
             }
         }
         stage("Viernes")
@@ -40,7 +46,7 @@ pipeline
             steps
             {
                 script {
-                    if(dia==5){
+                    if(dia==2){
                       def casue=currentBuild.rawBuild.getCause(Cause.UserIdCause)
                       if (cause != null) {
                           def user = cause.userId ?: 'anonymous'

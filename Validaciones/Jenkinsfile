@@ -1,0 +1,66 @@
+
+def dia = new Date().getDay()
+pipeline
+{
+    agent any
+    stages
+    {
+        stage("Lunes")
+        {
+            steps
+            {
+                script {
+                        
+                }
+            }
+        }
+        stage("Martes")
+        {
+            steps
+            {
+                script {
+                  if(dia==2){
+                    def hoy = new Date()
+                    println "La fecha actual es: " + hoy
+                  }
+                }
+            }
+        }
+        stage("Miércoles")
+        {
+            steps
+            {
+                script {
+                    
+                }
+            }
+        }
+        stage("Jueves")
+        {
+            steps
+            {
+                script {
+                    
+                }
+            }
+        }
+        stage("Viernes")
+        {
+            steps
+            {
+                script {
+                    if(dia==5){
+                      def casue currentBuild.rawBuild.getCause(Cause.UserIdCause)
+                      if (cause != null) {
+                          def user = cause.userId ?: 'anonymous'
+                          echo "started by ${user}"
+                      } else {
+                          echo "started some other way"
+                      }
+                      println "El usuario que ejecuta la tarea es: " + cause.userId ?: 'anonymous'
+                  }
+                }
+            }
+        }
+    }
+}

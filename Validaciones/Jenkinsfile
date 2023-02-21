@@ -7,12 +7,7 @@ pipeline
     {
         stage("Lunes")
         {
-            steps
-            {
-                script {
-                        
-                }
-            }
+            steps{}
         }
         stage("Martes")
         {
@@ -28,21 +23,11 @@ pipeline
         }
         stage("Miércoles")
         {
-            steps
-            {
-                script {
-                    
-                }
-            }
+            steps{}
         }
         stage("Jueves")
         {
-            steps
-            {
-                script {
-                    
-                }
-            }
+            steps{}
         }
         stage("Viernes")
         {

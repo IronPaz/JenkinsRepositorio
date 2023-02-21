@@ -8,8 +8,10 @@ pipeline
         stage("Lunes")
         {
             steps{
-                if(dia==1){
-                    println "Hoy no se hace nada."
+                script {
+                    if(dia==1){
+                        println "Hoy no se hace nada."
+                    }
                 }
             }
         }
@@ -28,16 +30,20 @@ pipeline
         stage("Miércoles")
         {
             steps{
-                if(dia==3){
-                    println "Hoy no se hace nada."
+                script {
+                    if(dia==3){
+                        println "Hoy no se hace nada."
+                    }
                 }
             }
         }
         stage("Jueves")
         {
             steps{
-                if(dia==4){
-                    println "Hoy no se hace nada."
+                script {
+                    if(dia==4){
+                        println "Hoy no se hace nada."
+                    }
                 }
             }
         }

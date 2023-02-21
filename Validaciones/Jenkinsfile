@@ -50,7 +50,7 @@ pipeline
             {
                 script {
                     if(dia==5){
-                      def casue currentBuild.rawBuild.getCause(Cause.UserIdCause)
+                      def casue=currentBuild.rawBuild.getCause(Cause.UserIdCause)
                       if (cause != null) {
                           def user = cause.userId ?: 'anonymous'
                           echo "started by ${user}"

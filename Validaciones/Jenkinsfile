@@ -7,7 +7,9 @@ pipeline
     {
         stage("Lunes")
         {
-            steps{}
+            steps{
+                println "Hoy no se hace nada."
+            }
         }
         stage("Martes")
         {
@@ -23,11 +25,15 @@ pipeline
         }
         stage("Miércoles")
         {
-            steps{}
+            steps{
+                println "Hoy no se hace nada."
+            }
         }
         stage("Jueves")
         {
-            steps{}
+            steps{
+                println "Hoy no se hace nada."
+            }
         }
         stage("Viernes")
         {

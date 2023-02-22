@@ -12,6 +12,7 @@ pipeline
                 script
                 {
                     def mult=a*b
+                    println "El resultado de la multiplicación es: " + mult
                 }
             }
         }
@@ -23,6 +24,7 @@ pipeline
                 {
                     def suma=a+b
                     def potencia=suma*suma
+                    println "El resultado de la potencia es: " + potencia
                 }
             }
         }

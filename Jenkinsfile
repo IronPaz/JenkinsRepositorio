@@ -25,8 +25,9 @@ pipeline
                 {
                     def suma=a+b
                     def potencia=suma*suma
-                    resP="El resultado de la potencia es: " + potencia
-                    append(file: "salida.txt", text: resP)
+                    def data = readFile(file: "salida.txt")
+                    resP=data+"El resultado de la potencia es: " + potencia
+                    writeFile(file: "salida.txt", text: resP)
                 }
             }
         }

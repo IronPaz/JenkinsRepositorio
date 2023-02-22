@@ -12,7 +12,8 @@ pipeline
                 script
                 {
                     def mult=a*b
-                    resM="El resultado de la multiplicación es: " + mult+".\n"
+                    resM="El resultado de la multiplicación es: " + mult
+                    println resM
                     writeFile(file: "salida.txt", text: resM)
                 }
             }
@@ -26,8 +27,10 @@ pipeline
                     def suma=a+b
                     def potencia=suma*suma
                     def data = readFile(file: "salida.txt")
-                    resP=data+"El resultado de la potencia es: " + potencia
-                    writeFile(file: "salida.txt", text: resP)
+                    resP="El resultado de la potencia es: " + potencia
+                    prinln resP
+                    res=data+"\n"+resP
+                    writeFile(file: "salida.txt", text: res)
                 }
             }
         }
